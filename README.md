@@ -21,3 +21,12 @@ Springboot2 WebFlux with SSE
 
 간단한 view를 위해서 freemarker를 사용한다.    
 
+##
+
+http://localhost:8080/    
+
+![실행이미지](https://github.com/basquiat78/sever-sent-event/blob/master/capture/shot1.png)    
+
+1초마다 시간 정보를 화면에 뿌린다.    
+
+거래소에서 사용한다면 실시간 마켓 정보, 챠트 정보등을 SSE를 활용해서 적용해 볼 수 있겠다.     
