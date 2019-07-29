@@ -1,0 +1,32 @@
+spring:
+  profiles:
+    active: local
+
+server:
+  error:
+    include-stacktrace: on-trace-param
+  port: 8080
+
+---
+spring:
+  profiles: local
+  freemarker:
+    charset: UTF-8
+    check-template-location: true
+    enabled: true
+    suffix: .ftl
+    template-loader-path: classpath:/templates
+
+#logging
+logging:
+  file: logs/logging.log
+  level:
+    root: INFO
+    org:
+      springframework:
+        web: INFO
+  pattern:
+    # console에 찍히는 로그 형식 정의
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    # console에서 로그는 위에 형식으로 찍히지만 파일로 씌여질 때 해당 패턴으로 찍는다. 
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
